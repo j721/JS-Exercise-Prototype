@@ -83,6 +83,11 @@ function Car(model, milesPerGallon) {
 
 Car.prototype.fill = function (gallons){
   this.tank = this.tank + gallons; 
+
+Car.prototype.drive = function(distance){
+  this.odometer = this.odometer + distance
+}
+
 };
 
 /*
@@ -123,10 +128,9 @@ Baby.prototype.play = function(){
         -"this" points to the new object that is created and returned by the constructor function
 
   4. Explicit Binding
-    The call method, apply method, and bind method allow us to explicitly state what the "this" keyword refers to 
-    We can override how set constructor objects by taking the object-oriented approach. We do so by calling them explicitely with new functions. 
-    .call and .apply and .bind methods
-
+    The call method, apply, and bind method when used on a function allow us to explicitly state what the "this" keyword refers to 
+    We can override how we set constructor objects by taking the object-oriented approach. We do so by calling them explicitely with new functions. 
+    .call and .apply 
 */   
 
 
